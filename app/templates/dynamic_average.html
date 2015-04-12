@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2>Average of a list of numbers</h2>
+ <form method='post'>
+Enter the elements for the list:<br>
+<input type="text" name="listt" size='130' placeholder='list elements seperated with space'><br>
+<input type="submit" value="compute..." value='submit'><br>
+</form> 
+{% if soln %}
+          <h4> Average is: {{soln}}</h4>
+     {% endif %}
+
+{% endblock %}
+
+<!-- The placeholder attribute specifies a hint that describes the expected value of an input field (a sample value or a short description of the format).The hint is displayed in the input field before the user enters a value.The placeholder attribute works with the following input types: text, search, url, tel, email, and password. -->
