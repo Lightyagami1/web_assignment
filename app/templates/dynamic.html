@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<title>Integrate</title>
+
+<h2>INTEGRATION</h2>
+
+<form method="post">
+
+    <p>Lower Limit: <input type="text" name="a"></p>
+    <p>Upper Limit: <input type="text" name="b"></p>
+    <p>Number of partitions: <input type="text" name="n"></p>
+    <p>Function: <input type="text" name="fn" placeholder='Eg x**3+x+5 '></p>
+    <p><input type="submit" value="submit" name="submit>"</p>
+
+</form>
+
+<p id="note">PLEASE REFRESH THE PAGE TO VIEW THE CORRECT GRAPH</p>
+
+{% if sol %}
+
+<center><h1>The value of the required Integral = {{sol}}</h1></center>
+<center><img src="../static/graph.png" id="graph"></center>
+
+{% endif %}
+
+{% endblock %}
+
